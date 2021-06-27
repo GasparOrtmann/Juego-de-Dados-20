@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1624817685 source:d:\onedrive\onedrive - frgp.utn.edu.ar\utn tup\primer año\1c\laboratorio i\tp integrador\proyecto\juego de dados 20\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+	<windows.h>
+	<stdlib.h>
+	<iomanip>
+	"funciones.h"
+	"rlutil.h"
+
+1624811554 d:\onedrive\onedrive - frgp.utn.edu.ar\utn tup\primer año\1c\laboratorio i\tp integrador\proyecto\juego de dados 20\funciones.h
+	"rlutil.h"
+	<windows.h>
+
+1623621316 d:\onedrive\onedrive - frgp.utn.edu.ar\utn tup\primer año\1c\laboratorio i\tp integrador\proyecto\juego de dados 20\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
