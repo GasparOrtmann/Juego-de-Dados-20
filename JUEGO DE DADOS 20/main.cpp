@@ -305,10 +305,7 @@ int main(){
             else{
                 cout<<"Numero generador de puntos: "<<generadorPuntos(sumaDados)<<endl;
                 rlutil::setColor(rlutil::GREEN); cout<<endl<<"PRESIONE ENTER PARA EL TIRO DE PUNTAJE"<<endl; rlutil::setColor(rlutil::WHITE);
-                cout<<endl<<endl;
-                getch();
-                std::cin.get();
-                system("cls");
+                getch(); std::cin.get(); system("cls");
                 cargarAleatorio(dados,6,6);
                 cout << "\n" << "\n" << endl << endl << endl;
                 MenuDe5Dados(dados); cout << "\n" << "\n" << endl << endl;
@@ -495,9 +492,9 @@ int main(){
                         }
                     puntuacionTotal+=puntaje;
                     }
-                rlutil::setColor(rlutil::GREEN); cout<<endl<<"Presione ENTER para pasar a la siguiente ronda"<<endl; rlutil::setColor(rlutil::WHITE);
+                rlutil::setColor(rlutil::GREEN); cout<<endl<<"Presione ENTER para pasar a la siguiente ronda"<<endl; rlutil::setColor(rlutil::WHITE); getch(); system("cls");
                 puntuaciones[0]={puntuacionTotal};
-                std::cin.get(); system("cls");
+
                 }
                 rlutil::setColor(rlutil::RED); cout<<"\t"<<"TERMINARON LA PARTIDA"<<endl<<endl; rlutil::setColor(rlutil::WHITE);
                 cout<<"Jugador: "<<nombre<<"\t"<<"\t"<<"Puntuacion: "<<puntuacionTotal<<endl;
