@@ -101,7 +101,7 @@ int main(){
                 cout<<endl<<"Suma de los dados: "<<sumaDados<<endl<<endl;
                 if(sumaDados<20){
                     rondaNegativa++;
-                    rlutil::setColor(rlutil::RED); cout<<"No llegaste a los puntos minimos, perdiste los puntos que apostaste"<<endl;  std::cin.get(); rlutil::setColor(rlutil::WHITE);
+                    rlutil::setColor(rlutil::RED); cout<<"No llegaste a los puntos minimos, perdiste los puntos que apostaste"<<endl<<endl;  std::cin.get(); rlutil::setColor(rlutil::WHITE);
                         puntuacionTotal=puntuacionTotal-valorApostado;
                 }
                 else{
@@ -112,19 +112,14 @@ int main(){
                     cout << "\n" << "\n" << endl << endl << endl;
                     MenuDe5Dados(dados); cout << "\n" << "\n" << endl << endl;
                     cout<<"Veces que se repite el numero generador de puntos: "<<contarNumerosRepetidos(dados,generadorPuntos(sumaDados),5)<<endl;
+                    puntaje=valorApostado*(contarNumerosRepetidos(dados,generadorPuntos(sumaDados),5));
+                    cout<<"Puntaje: "<<puntaje<<endl<<endl;
+                    if(puntaje==0){
+                        rondasCeroPuntos++;
+                        }
+                        puntuacionTotal+=puntaje;
                     }
-                puntaje=valorApostado*(contarNumerosRepetidos(dados,generadorPuntos(sumaDados),5));
-                cout<<"Puntaje: "<<puntaje<<endl<<endl;
-                if(rondas>1){
-                    rlutil::setColor(rlutil::GREEN); cout<<"Presione ENTER para pasar a la siguiente ronda"<<endl; rlutil::setColor(rlutil::WHITE);
-                }
-                else{
-                    rlutil::setColor(rlutil::GREEN); cout<<"Presione ENTER para terminar la partida"<<endl; rlutil::setColor(rlutil::WHITE);
-                }
-                if(puntaje==0){
-                    rondasCeroPuntos++;
-                }
-                puntuacionTotal+=puntaje;
+                rlutil::setColor(rlutil::GREEN); cout<<"Presione ENTER para pasar a la siguiente ronda"<<endl; rlutil::setColor(rlutil::WHITE);
                 puntuaciones[0]={puntuacionTotal};
                 std::cin.get();     system("cls");
                 }
@@ -222,9 +217,8 @@ int main(){
                 system("cls");
                 cout<<"Suma de los dados: "<<sumaDados<<endl<<endl;
                 if(sumaDados<20){
-                    rlutil::setColor(rlutil::RED); cout<<"No llegaste a los puntos minimos, perdiste los puntos que apostaste"<<endl; rlutil::setColor(rlutil::WHITE);
+                    rlutil::setColor(rlutil::RED); cout<<"No llegaste a los puntos minimos, perdiste los puntos que apostaste"<<endl<<endl; rlutil::setColor(rlutil::WHITE);
                         puntuacionTotalJ1=puntuacionTotalJ1-valorApostadoJ1;
-                    std::cin.get();
                 }
                 else{
                     cout<<"Numero generador de puntos: "<<generadorPuntos(sumaDados)<<endl;
@@ -234,9 +228,9 @@ int main(){
                     cout << "\n" << "\n" << endl << endl << endl;
                     MenuDe5Dados(dados); cout << "\n" << "\n" << endl << endl;
                     cout<<"Veces que se repite el numero generador de puntos: "<<contarNumerosRepetidos(dados,generadorPuntos(sumaDados),5)<<endl;
+                    puntajeJ1=valorApostadoJ1*(contarNumerosRepetidos(dados,generadorPuntos(sumaDados),5));
+                    cout<<"Puntaje: "<<puntajeJ1<<endl<<endl;
                     }
-                puntajeJ1=valorApostadoJ1*(contarNumerosRepetidos(dados,generadorPuntos(sumaDados),5));
-                cout<<"Puntaje: "<<puntajeJ1<<endl<<endl;
                 rlutil::setColor(rlutil::GREEN); cout<<"Presione ENTER para pasar a la siguiente ronda"<<endl; rlutil::setColor(rlutil::WHITE);
                 puntuacionTotalJ1+=puntajeJ1;
                 puntuaciones[1]={puntuacionTotalJ1};
@@ -300,12 +294,12 @@ int main(){
                 rlutil::setColor(rlutil::GREEN); cout<<endl<<endl<<"Presione ENTER para continuar"<<endl; rlutil::setColor(rlutil::WHITE);
                 getch(); system("cls");
             }
-            tirada++; sumaDados+=dados[pos];
+                tirada++; sumaDados+=dados[pos];
                 }
-            system("cls");
-            cout<<"Suma de los dados: "<<sumaDados<<endl<<endl;
-            if(sumaDados<20){
-                    rlutil::setColor(rlutil::RED); cout<<"No llegaste a los puntos minimos, perdiste los puntos que apostaste"<<endl;  std::cin.get(); rlutil::setColor(rlutil::WHITE);
+                system("cls");
+                cout<<"Suma de los dados: "<<sumaDados<<endl<<endl;
+                if(sumaDados<20){
+                    rlutil::setColor(rlutil::RED); cout<<"No llegaste a los puntos minimos, perdiste los puntos que apostaste"<<endl<<endl;  std::cin.get(); rlutil::setColor(rlutil::WHITE);
                     puntuacionTotalJ2=puntuacionTotalJ2-valorApostadoJ2;
                 }
             else{
@@ -319,12 +313,12 @@ int main(){
                 cout << "\n" << "\n" << endl << endl << endl;
                 MenuDe5Dados(dados); cout << "\n" << "\n" << endl << endl;
                 cout<<"Veces que se repite el numero generador de puntos: "<<contarNumerosRepetidos(dados,generadorPuntos(sumaDados),5)<<endl;
+                puntajeJ2=valorApostadoJ2*(contarNumerosRepetidos(dados,generadorPuntos(sumaDados),5));
+                cout<<"Puntaje: "<<puntajeJ2<<endl<<endl;
                 }
-            puntajeJ2=valorApostadoJ2*(contarNumerosRepetidos(dados,generadorPuntos(sumaDados),5));
-            cout<<"Puntaje: "<<puntajeJ2<<endl<<endl;
-                    rlutil::setColor(rlutil::GREEN); cout<<"Presione ENTER para pasar a la siguiente ronda"<<endl; rlutil::setColor(rlutil::WHITE);
-            puntuacionTotalJ2+=puntajeJ2;
-            std::cin.get(); system("cls");
+                rlutil::setColor(rlutil::GREEN); cout<<"Presione ENTER para pasar a la siguiente ronda"<<endl; rlutil::setColor(rlutil::WHITE);
+                puntuacionTotalJ2+=puntajeJ2;
+                std::cin.get(); system("cls");
                     }
             }
                 if(puntuacionTotalJ1==puntuacionTotalJ2){
@@ -483,7 +477,7 @@ int main(){
                 cout<<"Suma de los dados: "<<sumaDados<<endl<<endl;
                 if(sumaDados<20){
                     rondaNegativa++;
-                    rlutil::setColor(rlutil::RED); cout<<"No llegaste a los puntos minimos, perdiste los puntos que apostaste"<<endl;  std::cin.get(); rlutil::setColor(rlutil::WHITE);
+                    rlutil::setColor(rlutil::RED); cout<<"No llegaste a los puntos minimos, perdiste los puntos que apostaste"<<endl; rlutil::setColor(rlutil::WHITE);
                         puntuacionTotal=puntuacionTotal-valorApostado;
                 }
                 else{
@@ -494,16 +488,16 @@ int main(){
                     cout << "\n" << "\n" << endl << endl << endl;
                     MenuDe5Dados(dadoSim); cout << "\n" << "\n" << endl << endl;
                     cout<<"Veces que se repite el numero generador de puntos: "<<contarNumerosRepetidos(dadoSim,generadorPuntos(sumaDados),5)<<endl;
+                    puntaje=valorApostado*(contarNumerosRepetidos(dadoSim,generadorPuntos(sumaDados),5));
+                    cout<<"Puntaje: "<<puntaje<<endl<<endl;
+                    if(puntaje==0){
+                        rondasCeroPuntos++;
+                        }
+                    puntuacionTotal+=puntaje;
                     }
-                puntaje=valorApostado*(contarNumerosRepetidos(dadoSim,generadorPuntos(sumaDados),5));
-                cout<<"Puntaje: "<<puntaje<<endl<<endl;
-                rlutil::setColor(rlutil::GREEN); cout<<"Presione ENTER para pasar a la siguiente ronda"<<endl; rlutil::setColor(rlutil::WHITE);
-                if(puntaje==0){
-                    rondasCeroPuntos++;
-                }
-                puntuacionTotal+=puntaje;
+                rlutil::setColor(rlutil::GREEN); cout<<endl<<"Presione ENTER para pasar a la siguiente ronda"<<endl; rlutil::setColor(rlutil::WHITE);
                 puntuaciones[0]={puntuacionTotal};
-                getch(); std::cin.get(); system("cls");
+                std::cin.get(); system("cls");
                 }
                 rlutil::setColor(rlutil::RED); cout<<"\t"<<"TERMINARON LA PARTIDA"<<endl<<endl; rlutil::setColor(rlutil::WHITE);
                 cout<<"Jugador: "<<nombre<<"\t"<<"\t"<<"Puntuacion: "<<puntuacionTotal<<endl;
